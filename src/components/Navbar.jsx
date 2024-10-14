@@ -37,7 +37,9 @@ const Navbar = () => {
   };
 
   return (
-    <header>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 text-white transition duration-300 ease-in-out`}
+    >
       <nav className="container mx-auto flex items-center justify-between py-6 px-4">
         {/* logo */}
         <div>
@@ -65,7 +67,10 @@ const Navbar = () => {
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } md:hidden`}
         >
-          <div className="cursor-pointer" onClick={toggleMenu}>
+          <div
+            className="cursor-pointer absolute top-8 right-4"
+            onClick={toggleMenu}
+          >
             <FaTimes />
           </div>
           <NavItems toggleMenu={toggleMenu} />
